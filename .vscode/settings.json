@@ -1,7 +1,4 @@
 {
-    "rust-analyzer.clippy.extraArgs": [
-        "+nightly-2024-06-16"
-    ],
     "rust-analyzer.rustfmt.extraArgs": [
         "+nightly-2024-06-16"
     ],
