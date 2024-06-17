@@ -1,0 +1,59 @@
+allowCompoundWords: true
+languageSettings:
+  - languageId: rust
+    ignoreRegExpList:
+      - rust-string_binary
+      - rust-string_raw
+      - rust-string
+
+patterns:
+  - name: rust-string
+    pattern: /(")[^\1]*?\1/g
+  - name: rust-string-binary
+    pattern: /\bbr?(").*?\1/gi
+  - name: rust-string-raw
+    pattern: /\bu?r#(").*?\1#/gi
+
+dictionaries:
+  - rust
+  - cpp
+  - c
+  - bash
+  - python
+
+ignoredPaths:
+  - Cargo.lock
+
+minWordLength: 5
+
+userWords:
+  - clangd
+  - bools
+  - docsrs
+  - impls
+  - inotify
+  - ipnet
+  - minifier
+  - mssql
+  - nanos
+  - nocapture
+  - nohup
+  - pathbuf
+  - prost
+  - proto
+  - protos
+  - Protobuf
+  - replacen
+  - rfind
+  - rustc
+  - rustfmt
+  - sccache
+  - schemars
+  - strat
+  - brotli
+  - flate
+  - tempdir
+  - thiserr
+  - sharded
+  - fira
+  - menlo
