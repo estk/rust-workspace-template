@@ -4,12 +4,7 @@ resolver = "2"
 
 [workspace.package]
 version = "0.0.1"
-edition = "2021"
-
-[profile.dev]
-opt-level = 1
-[profile.dev.package."*"]
-opt-level = 3
+edition = "2024"
 
 [workspace.dependencies]
 
@@ -48,10 +43,10 @@ cargo = "warn"
 
 # We allow this because internal crates really dont need most of these.
 cargo_common_metadata = { level = "allow", priority = 1 }
+
 # I find this is largely useless since some names _should_ be similar
 # Additionally it does not seem to be a stadard the community enforces.
 similar_names = { level = "allow", priority = 1 }
-
 
 # The following are restrictions, the rational is as follows.
 # 1. Encorage standardization of the code we write
@@ -61,9 +56,13 @@ similar_names = { level = "allow", priority = 1 }
 
 # Use ManuallyDrop
 mem_forget = "warn"
+
 # You should be pretty sure you're in bounds.
 indexing_slicing = "warn"
 missing_asserts_for_indexing = "warn"
+
+allow_attributes = "warn"
+allow_attributes_without_reason = "warn"
 
 # These should be treated as suggestions and may be switched off if an explaination is provided.
 absolute_paths = "warn"
@@ -99,9 +98,3 @@ unseparated_literal_suffix = "warn"
 unwrap_in_result = "warn"
 unwrap_used = "warn"
 verbose_file_reads = "warn"
-
-# Enable when stabilized
-# Stabilization pr: https://github.com/rust-lang/rust/issues/54503
-# allow_attributes = "warn"
-# This one we already do informally.
-# allow_attributes_without_reason = "warn"

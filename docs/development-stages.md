@@ -4,7 +4,7 @@
 
 - POC: Proof of concept
   - The only deliverable is a proof that the product is possible.
-  - Proof: Given constraints and requirements that we're aware of, demonstrate viability.
+  - Proof: Given constraints and requirements that we're aware of, demonstrate key features.
   - Possible: An application may be shipped free of defect and conforming to requirements.
 - MVP: Minimum viable product
   - A product with enough features to attract customers in order to validate a product idea.

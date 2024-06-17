@@ -1,19 +1,9 @@
-msrv = "1.77"
-
 # use temp_dir crate
 disallowed-methods = ["std::env::temp_dir"]
 
-disallowed-types = [
-    # use parking_lot if possible
-    "std::sync::Mutex",
-    "std::sync::RwLock",
-    "std::sync::Condvar",
-
-    # use once_cell
-    "std::sync::Once",
-]
-
-allow-unwrap-in-tests = true
 allow-expect-in-tests = true
+allow-indexing-slicing-in-tests = true
+allow-panic-in-tests = true
+allow-unwrap-in-tests = true
 absolute-paths-max-segments = 2
 semicolon-inside-block-ignore-singleline = true
