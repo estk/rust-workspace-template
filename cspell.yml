@@ -21,7 +21,7 @@ dictionaries:
   - bash
   - python
 
-ignoredPaths:
+ignorePaths:
   - Cargo.lock
 
 minWordLength: 5

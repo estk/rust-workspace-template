@@ -1,5 +1,15 @@
 [unstable]
 codegen-backend = true
 
-[profile.server-dev]
+[profile.cl]
 codegen-backend = "cranelift"
+opt-level = 1
+
+[profile.cl.package."*"]
+opt-level = 3
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
